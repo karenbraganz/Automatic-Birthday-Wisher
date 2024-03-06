@@ -8,6 +8,7 @@ import datetime as dt
 load_dotenv(dotenv_path="./secrets.env")
 EMAIL = os.getenv('EMAIL')
 PWD = os.getenv('PASSWORD')
+HOST = os.getenv('HOST')
 
 letter_choice = ["letter_templates/letter_1.txt", "letter_templates/letter_2.txt", "letter_templates/letter_3.txt"]
 
@@ -39,7 +40,7 @@ for key in birthday_people:
     with open(letter) as file:
         message = file.read()
         message = message.replace("[NAME]", person)
-    with smtplib.SMTP("smtp.gmail.com", 587) as connection:
+    with smtplib.SMTP(HOST, 587) as connection:
         connection.starttls()
         connection.login(user=EMAIL, password=PWD)
         connection.sendmail(
