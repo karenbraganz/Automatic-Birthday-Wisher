@@ -14,7 +14,7 @@
     </ul>
   </li>
   <li>
-    <p>Create a .env file within the same directory as the main.py file. You may store the environment variables containing your email address and app password within this file for main.py to load while running. You may copy the contents of the env.placeholder file from this repository into your .env file and replace the email and app password data appropriately.</p>
+    <p>Create a .env file within the same directory as the main.py file. You may store the environment variables containing your email address and app password within this file for main.py to load while running. You may copy the contents of the env.placeholder file from this repository into your .env file and replace the email, app password, and host data appropriately.</p>
   </li>
   <li>
     <p>Edit the birthdays.csv file to include the names, emails, and birthdays of your friends and family.</p>
